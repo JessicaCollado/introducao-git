@@ -1,0 +1,47 @@
+programa {
+  funcao inicio() {
+    
+algoritmo "VetorOperacoes"
+var
+    vetor: vetor[1..10] de inteiro
+    i, soma: inteiro
+    media: real
+inicio
+    // Entrada de dados
+    para i de 1 ate 10 faca
+        escreva("Digite o ", i, "º número: ")
+        leia(vetor[i])
+    fimpara
+
+    // Elementos nos índices ímpares
+    escreva("Elementos nos índices ímpares:\n")
+    para i de 1 ate 10 faca
+        se (i % 2 = 0) entao
+            escreva(vetor[i], " ")
+        fimse
+    fimpara
+    escreval("\n")
+
+    // Elementos pares
+    escreva("Elementos pares:\n")
+    para i de 1 ate 10 faca
+        se (vetor[i] % 2 = 0) entao
+            escreva(vetor[i], " ")
+        fimse
+    fimpara
+    escreval("\n")
+
+    // Soma de todos os elementos
+    soma <- 0
+    para i de 1 ate 10 faca
+        soma <- soma + vetor[i]
+    fimpara
+    escreval("Soma: ", soma)
+
+    // Média de todos os elementos
+    media <- soma / 10
+    escreval("Média: ", media)
+fimalgoritmo
+
+  }
+}
